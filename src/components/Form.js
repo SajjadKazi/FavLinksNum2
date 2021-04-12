@@ -9,7 +9,10 @@ class Form extends Component {
 
         */
        this.state = {
-           
+
+           name: "",
+           URL:  ""
+
     
        }
        
@@ -20,10 +23,14 @@ class Form extends Component {
         /*
             TODO - Logic for changing state based on form changes
         */
-       
+            console.log("Updated")
+            console.log(event.target)
+
+        this.setState({[event.target.name] : [event.target.value]})
 
     }
 
+   
     onFormSubmit = (event) => {
         // to prevent page reload on form submit
         event.preventDefault();
@@ -31,7 +38,10 @@ class Form extends Component {
         /*
             TODO - Logic for calling props to handle submission and setting state changes
         */
-
+       
+       console.log("clicked me Count")
+        
+         console.log(event.target)
     }
 
     render() {
@@ -42,13 +52,13 @@ class Form extends Component {
             <form>
                 <label >Name:</label>
 
-                <input type="text"></input>
+                <input type="text" name= "name"   onChange={this.handleChange} value={this.state.name}></input>
 
                 <label >URL:</label>
 
-                <input type="text"></input>
+                <input type="text" name= "URL"  onChange={this.handleChange} value={this.state.URL}></input>
                 
-                <button>Submit</button>
+                <button onClick={this.onFormSubmit} >Submit</button>
                                  
             </form>
           
