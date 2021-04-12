@@ -8,12 +8,20 @@ class Form extends Component {
             TODO - set initial state for link name and URL 
 
         */
+       this.state = {
+           
+    
+       }
+       
+       
     }
 
     handleChange = event => {
         /*
             TODO - Logic for changing state based on form changes
         */
+       
+
     }
 
     onFormSubmit = (event) => {
@@ -27,11 +35,23 @@ class Form extends Component {
     }
 
     render() {
-
+        
         return(
+            
+            /* TODO - Logic for returning a form element with labels and inputs for link name and URL */
             <form>
-                {/* TODO - Logic for returning a form element with labels and inputs for link name and URL */}
+                <label >Name:</label>
+
+                <input type="text"></input>
+
+                <label >URL:</label>
+
+                <input type="text"></input>
+                
+                <button>Submit</button>
+                                 
             </form>
+          
         )
     
     }
