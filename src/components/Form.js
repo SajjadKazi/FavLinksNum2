@@ -26,8 +26,8 @@ class Form extends Component {
             console.log("Updated")
             console.log(event.target)
 
-        this.setState({[event.target.name] : [event.target.value]})
-
+        this.setState({[event.target.name] : event.target.value})
+            // based on our Value  we wanna change the name in State 
     }
 
    
@@ -39,9 +39,9 @@ class Form extends Component {
             TODO - Logic for calling props to handle submission and setting state changes
         */
        
-       console.log("clicked me Count")
-        
-         console.log(event.target)
+         console.log(this.state)
+
+         this.props.handleSubmit(this.state)
     }
 
     render() {
@@ -52,7 +52,7 @@ class Form extends Component {
             <form>
                 <label >Name:</label>
 
-                <input type="text" name= "name"   onChange={this.handleChange} value={this.state.name}></input>
+                <input type="text" name= "name"  onChange={this.handleChange} value={this.state.name}></input>
 
                 <label >URL:</label>
 

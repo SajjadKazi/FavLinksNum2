@@ -36,7 +36,7 @@ const Table = (props) => {
     
     <table>
         <TableHeader/>
-        <TableBody linkData={[]}/>
+        <TableBody linkData={props.linkData}/>
 
     </table>
     
