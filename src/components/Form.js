@@ -28,6 +28,7 @@ class Form extends Component {
 
         this.setState({[event.target.name] : event.target.value})
             // based on our Value  we wanna change the name in State 
+            
     }
 
    
@@ -42,6 +43,9 @@ class Form extends Component {
          console.log(this.state)
 
          this.props.handleSubmit(this.state)
+
+         
+        
     }
 
     render() {
@@ -61,6 +65,8 @@ class Form extends Component {
                 <button onClick={this.onFormSubmit} >Submit</button>
                                  
             </form>
+          
+
           
         )
     
